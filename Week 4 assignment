@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Landing Page</title>
+    <style>
+        /* Define global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Define container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Define tab styles */
+        .tab {
+            display: none;
+            background-color: inherit;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Define tab content styles */
+        .tab-content {
+            margin-top: 40px;
+        }
+
+        /* Define tab button styles */
+        .tab-button {
+            cursor: pointer;
+            padding: 15px 30px;
+            background-color: #009688;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab-button:hover {
+            background-color: #00796b;
+        }
+
+        /* Define tab button active styles */
+        .tab-button.active {
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to My Landing Page</h1>
+
+        <!-- Tab buttons -->
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab(1)">Tab 1</button>
+            <button class="tab-button" onclick="openTab(2)">Tab 2</button>
+            <button class="tab-button" onclick="openTab(3)">Tab 3</button>
+            <button class="tab-button" onclick="openTab(4)">Tab 4</button>
+        </div>
+
+        <!-- Tab content -->
+        <div class="tab-content" id="tab1">
+            <h2>Tab 1</h2>
+            <p>This is the content for Tab 1. It can include real text, images, and other elements to showcase the
+                features or benefits of your product or service.</p>
+        </div>
+        <div class="tab-content" id="tab2">
+            <h2>Tab 2</h2>
+            <p>This is the content for Tab 2. It can include real text, images, and other elements to showcase the
+                features or benefits of your product or service.</p>
+        </div>
+        <div class="tab-content" id="tab3">
+            <h2>Tab 3</h2>
+            <p>This is the content for Tab 3. It can include real text, images, and other elements to showcase the
+                features or benefits of your product or service.</p>
+        </div>
+        <div class="tab-content" id="tab4">
+            <h2>Tab 4</h2>
+            <p>This is the content for Tab 4. It can include real text, images, and other elements to showcase the
+                features or benefits of your product or service.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to open tabs and show content
+        function openTab(tabIndex) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i
+].style.display = "none";
+}        // Remove active class from all tab buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+
+        // Show the selected tab content
+        document.getElementById("tab" + tabIndex).style.display = "block";
+
+        // Add active class to the selected tab button
+        document.getElementById("button" + tabIndex).classList.add("active");
+    }
+</script>
