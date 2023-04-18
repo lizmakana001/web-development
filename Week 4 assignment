@@ -4,33 +4,24 @@
 <head>
     <title>My Landing Page</title>
     <style>
-        /* Define global styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
-
-        /* Define container styles */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-
-        /* Define tab styles */
         .tab {
             display: none;
             background-color: inherit;
             padding: 20px;
             color: #fff;
         }
-
-        /* Define tab content styles */
         .tab-content {
             margin-top: 40px;
         }
-
-        /* Define tab button styles */
         .tab-button {
             cursor: pointer;
             padding: 15px 30px;
@@ -45,8 +36,6 @@
         .tab-button:hover {
             background-color: #00796b;
         }
-
-        /* Define tab button active styles */
         .tab-button.active {
             background-color: #4caf50;
         }
@@ -89,23 +78,16 @@
     </div>
 
     <script>
-        // Function to open tabs and show content
         function openTab(tabIndex) {
-            // Hide all tab contents
             var tabContents = document.getElementsByClassName("tab-content");
             for (var i = 0; i < tabContents.length; i++) {
                 tabContents[i
 ].style.display = "none";
-}        // Remove active class from all tab buttons
         var tabButtons = document.getElementsByClassName("tab-button");
         for (var i = 0; i < tabButtons.length; i++) {
             tabButtons[i].classList.remove("active");
         }
-
-        // Show the selected tab content
         document.getElementById("tab" + tabIndex).style.display = "block";
-
-        // Add active class to the selected tab button
         document.getElementById("button" + tabIndex).classList.add("active");
     }
 </script>
